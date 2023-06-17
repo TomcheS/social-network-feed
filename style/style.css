@@ -1,0 +1,98 @@
+@import url("./common.css");
+@import url("./nav.css");
+@import url("./postsfeed.css");
+@import url("./menu.css");
+
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"] {
+    border-radius: 0;
+}
+
+input[type="text"]::-ms-clear {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1e21;
+}
+
+a:hover {
+    color: black;
+}
+
+.new-post-button {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 12px 28px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+}
+
+.header-container {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 3fr) 1fr;
+    column-gap: 32px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .content-grid {
+        grid-template-columns: 1fr minmax(0, 2fr) 1fr;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .content-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.content-grid .column-center {
+    padding-top: 56px;
+}
+
+.content-grid .column-center .content-area {
+    max-width: 680px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
